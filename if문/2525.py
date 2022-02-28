@@ -13,13 +13,17 @@ else:
 H,M = map(int,input().split())
 L=int(input())
 
-a=(M+L)//60 #몫
-b=(M+L)%60 #시간
+a=(M+L)//60 #몫, 시간
+b=(M+L)%60 #나머지, 분
 
 
-if M+L>60:
-    print(H+a,b)
-elif M+L>60 and H+a>24:
-    print(H+a-24, b)
+if M+L>60 and H+a>=24:
+    print(H+a-24, b,1)
+elif M+L>60 and H+a<24:
+    print(H+a,b,2)
+elif M+L==60:
+    print(H+a,0)
+    if H+a >=24:
+        print(H+a-24,0)
 else:
-    print(H, M+L)
+    print(H, M+L,3)
