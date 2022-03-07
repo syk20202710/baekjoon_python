@@ -10,6 +10,7 @@ elif y+z > 60:
 else:
     print(x, y+z)
 '''
+
 H,M = map(int,input().split())
 L=int(input())
 
